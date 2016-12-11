@@ -121,7 +121,7 @@ if __name__ == '__main__':
 	parser.add_argument("oper",help="dec/enc")
 	parser.add_argument("fd",help="file or directory(with -R)")
 	parser.add_argument("-R","--recursive",help="with this flag,one can encode/decode a directory recursively.",action="store_true")
-	args= parser.parse_args('dec -R /home/yyk/Pictures/test'.split())
+	args= parser.parse_args()
 
 	handle_args(args)
 
