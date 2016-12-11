@@ -1,8 +1,8 @@
 # encfile
 
 ##Purpose
-Encode/decode a file/files simply and fast
-Support multi-layer encode/decode.
+* Encode/decode a file/files simply and fast
+* Support multi-layer encode/decode.
 
 ##Priciple
 Make it(file to be encoded) cannt to be opened properly by Modifing its header.
