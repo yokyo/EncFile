@@ -85,7 +85,7 @@ def dec(filename):
 		with closing(mmap.mmap(f.fileno(),header_len)) as m:
 			m[0:]= ohead
 
-		f.truncate(size-header_len)
+		f.truncate(size- header_len)
 		done=True;
 	if done:
 		sname= base64.b64decode(name)
@@ -114,6 +114,19 @@ def handle_args(args):
 		eval(args.oper)(args.fd)
 
 # main
+#usage: print encfile.py -h
+
+# more experience:
+# $ln -s encfile.py encfile
+# $encfile -h
+# encode file:
+# $encfile enc filename.ext
+# encode directory:
+# $encfile enc -R /path/to/the/dir
+# decode a file:
+# $encfile dec string.ixb
+# decode directory:
+# $encfile dec -R /path/to/the/dir
 if __name__ == '__main__':
 
 	# xxx dec/enc [-R dir | file]
